@@ -1,4 +1,5 @@
 const {USERS_BBDD} = require('../bbdd');
+//Buscar un usuario
 const userGuid = (req, res) => {
     const { guid } = req.params
     // Buscamos los detalles de la cuenta a traves del guild recibido por req.params
@@ -8,6 +9,7 @@ const userGuid = (req, res) => {
     // Si existe respondemos con los detalles de la cuenta
     return res.send(user)
   }
+//Añadir un nuevo usuario
 const regUser =  (req, res) => {
     const { guid, name } = req.body
     const newUser = { guid, name }
@@ -17,7 +19,8 @@ const regUser =  (req, res) => {
     USERS_BBDD.push({ guid, name })
     return res.status(201).send(newUser)
   };
-  const updateUser = (req, res) => {
+//Actualizar un usuario
+const updateUser = (req, res) => {
     const { guid } = req.params
     const { name } = req.body
     // Nos aseguramos que ha ingresado un nombre
@@ -31,7 +34,8 @@ const regUser =  (req, res) => {
     // Enviamos respuesta Ok
     return res.send(user)
   };
-  const deleteUser =(req, res) => {
+//Eliminar un usuario
+const deleteUser =(req, res) => {
     const { guid } = req.params
     const userIndex = USERS_BBDD.findIndex(user => user.guid === guid)
     // Si no encuentra el guid nos devuelve un -1
