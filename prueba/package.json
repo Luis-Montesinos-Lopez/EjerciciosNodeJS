@@ -1,0 +1,24 @@
+{
+  "name": "releevant",
+  "version": "1.0.0",
+  "description": "la prueba de releevant",
+  "main": "ls-advanced.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "luis-montesinos"
+  },
+  "author": "luis montesinos lopez",
+  "license": "ISC",
+  "dependencies": {
+    "picocolors": "^1.0.0"
+  },
+  "devDependencies": {
+    "standard": "^17.1.0"
+  },
+  "eslintConfig":{
+    "extends":"standard"
+  }
+}
