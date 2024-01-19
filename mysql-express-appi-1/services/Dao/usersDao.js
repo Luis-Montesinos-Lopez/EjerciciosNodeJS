@@ -1,0 +1,12 @@
+const userQuerys = require("../MysqlQuerys/usersQuerys");
+const dao = {};
+dao.getUsers = async () => await userQuerys.getUsers();
+dao.getUserById = async (id) => await userQuerys.getUserById(id);
+dao.getUserByEmail = async (email) => await userQuerys.getUserByEmail(email);
+dao.addUserAcces = async (userAccesData) => await userQuerys.addUserAcces(userAccesData);
+dao.addUser = async (userData) => await userQuerys.addUser(userData);
+dao.updateUserAcces = async (id, userAccesData) => await userQuerys.updateUserAcces(id, userAccesData);
+dao.updateUser = async (id, userData) => await userQuerys.updateUser(id, userData);
+dao.deleteUser = async (id) => await userQuerys.deleteUser(id);
+dao.deleteUserAcces = async (accesId) => await userQuerys.deleteUserAcces(accesId);
+module.exports = dao;

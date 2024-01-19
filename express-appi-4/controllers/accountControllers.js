@@ -47,4 +47,4 @@ const deleteUser =(req, res) => {
   };
 
 
-  module.exports = {userGuid,regUser,updateUser,deleteUser}
+  module.exports = { userGuid, regUser, updateUser, deleteUser }
